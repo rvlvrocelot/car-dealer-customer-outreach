@@ -1,0 +1,44 @@
+<h1> Car App</h1>
+
+<%= link_to 'Add a Car', new_car_path %>
+
+<%= form_for :car do |f| %>
+	<p>
+		    Customer Name<br>
+    		<%= f.text_field :customer %>
+	</p>
+
+	<p>
+		    Customer Email<br>
+    		<%= f.text_field :customerEmail %>
+	</p>
+
+	<table>
+	  <tr>
+	  	<th>Check</th>
+	  	<th>Year</th>
+	    <th>Make</th>
+	    <th>Model</th>
+	    <th>Price</th>
+	    <th>Picture</th>
+
+	  </tr>
+	 
+	  <% @cars.each do |car| %>
+	    <tr>
+	      <td><%= check_box_tag car.id, false %>
+	      <td><%= car.carYear %></td>
+	      <td><%= car.carMake %></td>
+	      <td><%= car.carModel %></td>
+	      <td>$<%= car.carPrice %></td>
+	      <% link = "/uploads/" + car.pictureName %>
+	      <td><img src= <%= raw link%> width="200" ></td>
+	    </tr>
+	  <% end %>
+	</table>		
+
+	<%= f.submit %>
+
+
+
+<% end %>

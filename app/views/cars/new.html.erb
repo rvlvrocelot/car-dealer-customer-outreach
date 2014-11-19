@@ -1,0 +1,55 @@
+<%= form_for :car, url: cars_path do |f| %>
+
+	<p>
+		Make <br>
+		<%= f.text_field :carMake %>
+	</p>
+
+	<p>
+		Model <br>
+		<%= f.text_field :carModel %>
+	</p>
+
+	<p>
+		Trim <br>
+		<%= f.text_field :carTrim %>
+	</p>
+
+	<p>
+		Year <br>
+		<%= f.text_field :carYear %>
+	</p>
+
+	<p>
+		Mileage <br>
+		<%= f.text_field :carMileage %>
+	</p>
+
+	<p>
+		Color <br>
+		<%= f.text_field :carColor %>
+	</p>
+
+	<p>
+		State <br>
+		<%= f.select :carState, [['New','new'],['Used','used']] %>
+	</p>		
+
+	<p>
+		Price <br>
+		<%= f.text_field :carPrice %>
+	</p>
+
+	<p>
+		Upload a picture<br>
+		<%= f.file_field :picture %>	
+	</p>
+
+		<%= f.hidden_field :pictureName, :value => "111" %>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+
+<% end %>

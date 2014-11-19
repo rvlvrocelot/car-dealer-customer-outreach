@@ -1,0 +1,46 @@
+<p>
+  <strong>Make:</strong>
+  <%= @car.carMake %>
+</p>
+ 
+<p>
+  <strong>Model:</strong>
+  <%= @car.carModel %>
+</p>
+
+<p>
+  <strong>Trim:</strong>
+  <%= @car.carTrim %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @car.carYear %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @car.carMileage %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @car.carColor %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @car.carState %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @car.carPrice %>
+</p>
+
+
+<% link = "/uploads/" + @car.pictureName %>
+
+<img src= <%= raw link%> >
+
+
